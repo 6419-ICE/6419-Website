@@ -15,6 +15,8 @@ const headerHTML = `
         <div id="searchResults" class="search-results"></div>
       </div>
     </div>
+    <script src="searchbar.js">    
+    </script>
     <a href="index">
       <img class="logo" src="https://codehs.com/uploads/cb46df9431dd7ffe3372f71a3c7a97a8" alt="ICE">
     </a>
