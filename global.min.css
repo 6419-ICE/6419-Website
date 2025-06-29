@@ -130,7 +130,7 @@ html {
     .search-bar {
       display: flex;
       align-items: center;
-      background-color: grey;
+      background-color: gray;
       height: 40px;
       width: 40px;
       border-radius: 50%;
@@ -167,8 +167,8 @@ html {
       position: absolute;
       top: 45px;
       right: 0;
-      background: darkblue;
-      color: orange;
+      background: #002D72;
+      color: white;
       width: 100%;
       border-radius: 10px;
       padding: 5px;
@@ -197,6 +197,6 @@ html {
     }
     .no-results {
       padding: 5px 10px;
-      color: orange;
+      color: white;
     }
 /*end header stuff*/
