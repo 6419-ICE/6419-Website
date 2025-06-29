@@ -130,7 +130,7 @@ html {
     .search-bar {
       display: flex;
       align-items: center;
-      background-color: gray;
+      background-color: white;
       height: 40px;
       width: 40px;
       border-radius: 50%;
@@ -146,11 +146,11 @@ html {
       border: none;
       outline: none;
       background: transparent;
-      color: white;
+      color: black;
       margin-left: 10px;
       width: 100%;
       display: none;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid black;
       padding: 2px;
     }
     .search-bar.expanded input {
@@ -160,7 +160,7 @@ html {
       background: none;
       border: none;
       cursor: pointer;
-      color: white;
+      color: black;
       font-size: 16px;
     }
     .search-results {
