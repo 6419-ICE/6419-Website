@@ -199,4 +199,12 @@ html {
       padding: 5px 10px;
       color: white;
     }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header > * {
+      flex-shrink: 0;
+    }
 /*end header stuff*/
