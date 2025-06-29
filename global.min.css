@@ -211,4 +211,8 @@ html {
     ::placeholder {
      color: white;
     }
+    .icons {
+      height:20px;
+      width:20px;
+    } 
 /*end header stuff*/
