@@ -11,7 +11,7 @@ const headerHTML = `
     <div class="search-container">
       <div class="search-bar">
         <input type="text" id="searchInput" placeholder="Search...">
-        <button style="font-weight:bolder; margin-left:9px;" id="searchBtn">&#x1F50E;&#xFE0E;</button>
+        <button style="font-weight:bolder; margin-left:9px;" id="searchBtn"></button>
         <div id="searchResults" class="search-results"></div>
       </div>
     </div>
