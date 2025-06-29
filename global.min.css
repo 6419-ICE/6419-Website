@@ -208,4 +208,7 @@ html {
     header > * {
       flex-shrink: 0;
     }
+    ::placeholder {
+     color: white;
+    }
 /*end header stuff*/

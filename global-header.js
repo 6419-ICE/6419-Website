@@ -10,7 +10,7 @@ const headerHTML = `
   <div style="display: flex; align-items: center; gap: 40px; margin-right: 20px;">
     <div class="search-container">
       <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search...">
+        <input type="text" id="searchInput" placeholder="Search">
         <button style="font-weight:bolder; margin-left:9px;" id="searchBtn">
         <img src="https://codehs.com/uploads/d32d2b2c0d288d661e2dc2a5aa74f91c" style="margin-left:-10px;"></button>
         <div id="searchResults" class="search-results"></div>
