@@ -37,6 +37,10 @@ const headerHTML = `
     <a href="contact">Contact Us</a>
     <hr style="border-top: 1px;margin: 0;">
   </div>
+  <br>
+  <br>
+  <br>
+  <br>
 `;
 
 document.addEventListener("DOMContentLoaded", () => {
