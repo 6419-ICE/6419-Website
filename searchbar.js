@@ -1,7 +1,13 @@
-const searchBtn = document.getElementById('searchBtn');
+document.addEventListener('DOMContentLoaded', () => {
+  // Wait a bit to ensure global-header.js has finished injecting the header
+  setTimeout(() => {
+    const searchBtn = document.getElementById('searchBtn');
     const searchBar = document.querySelector('.search-bar');
     const searchInput = document.getElementById('searchInput');
     const searchResults = document.getElementById('searchResults');
+
+    // If any critical element is missing, don't proceed
+    if (!searchBtn || !searchBar || !searchInput || !searchResults) return;
 
     const pages = [
       { title: "Home", description: "Go to homepage", link: "index" },
@@ -69,3 +75,5 @@ const searchBtn = document.getElementById('searchBtn');
         }
       }
     });
+  }, 50); // delay allows global-header.js to run first
+});
