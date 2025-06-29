@@ -1,6 +1,6 @@
 const footerLeft = document.createElement("footer");
 footerLeft.style.textAlign = "left";
-footerLeft.innerHTML = `<p>© ICE</p>`;
+footerLeft.innerHTML = `<p>&#169 ICE</p>`;
 
 const footerRight = document.createElement("footer");
 footerRight.style.cssText = "background-color:transparent; text-align:right;";
