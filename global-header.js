@@ -12,7 +12,7 @@ const headerHTML = `
       <div class="search-bar">
         <input type="text" id="searchInput" placeholder="Search...">
         <button style="font-weight:bolder; margin-left:9px;" id="searchBtn">
-        <img src="https://codehs.com/uploads/d32d2b2c0d288d661e2dc2a5aa74f91c" style="filter: invert(100%); margin-left:-10px;"></button>
+        <img src="https://codehs.com/uploads/d32d2b2c0d288d661e2dc2a5aa74f91c" style="margin-left:-10px;"></button>
         <div id="searchResults" class="search-results"></div>
       </div>
     </div>
