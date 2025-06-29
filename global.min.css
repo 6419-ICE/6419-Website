@@ -214,5 +214,6 @@ html {
     .icons {
       height:20px;
       width:20px;
+      border-radius:3px;
     } 
 /*end header stuff*/
