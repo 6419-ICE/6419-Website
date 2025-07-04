@@ -243,6 +243,7 @@ html {
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         margin-right: 100px;
         margin-top: 40px;
+        transition:all 0.5s;
     }
     .home-sidebar {
         position: absolute;
@@ -254,5 +255,6 @@ html {
         margin-left: 100px;
         margin-top: 40px;
         max-width: 600px;
+        transition:all 0.5s;
     }
 /*end header stuff*/
