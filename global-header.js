@@ -8,7 +8,7 @@ const headerHTML = `
     </button>
   </div>
   <p style="color:white; text-align:center;">
-  I.C.E. &nbsp; for Innovation, Collaboration, and Exellence
+    Team Name
   </p>
   <div style="display: flex; align-items: center; gap: 40px; margin-right: 20px;">
     <div class="search-container">

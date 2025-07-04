@@ -244,4 +244,15 @@ html {
         margin-right: 100px;
         margin-top: 40px;
     }
+    .home-sidebar {
+        position: absolute;
+        left: 20px;
+        top: 100px;
+        background-color: #f8f8f8;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        margin-left: 100px;
+        margin-top: 40px;
+        max-width: 600px;
+    }
 /*end header stuff*/
