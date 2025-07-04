@@ -223,6 +223,7 @@ html {
       margin: 20px;
       text-decoration: none;
       color: black;
+      margin-left: 5vw;
     }
     .icon-group:hover {
       color:#002D72
@@ -232,5 +233,15 @@ html {
       width: 150px;
       border-radius: 20px;
       margin-top: 10px;
+    }
+    .contact-sidebar {
+        position: absolute;
+        right: 20px;
+        top: 100px;
+        background-color: #f8f8f8;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        margin-right: 100px;
+        margin-top: 40px;
     }
 /*end header stuff*/
