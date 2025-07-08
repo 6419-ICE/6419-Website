@@ -39,6 +39,8 @@ const headerHTML = `
     <hr style="border-top: 1px;margin: 0;">
     <a href="sponsors">Sponsors</a>
     <hr style="border-top: 1px;margin: 0;">
+    <a href="events">Current Events</a>
+    <hr style="border-top: 1px;margin: 0;">
     <a href="contact">Contact Us</a>
     <hr style="border-top: 1px;margin: 0;">
   </div>
