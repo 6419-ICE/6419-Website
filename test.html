@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -25,12 +26,17 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      opacity: 1;
+      transition: opacity 1s ease;
     }
 
     .dots-container {
       position: absolute;
       bottom: 15px;
       left: 50%;
+      background-color:black;
+      opacity:0.7;
+      border-radius:50px;
       transform: translateX(-50%);
       display: flex;
       gap: 10px;
@@ -42,7 +48,7 @@
       height: 12px;
       background-color: white;
       border-radius: 50%;
-      opacity: 0.5;
+      opacity: 1;
       cursor: pointer;
       transition: transform 0.3s, opacity 0.3s;
     }
@@ -74,20 +80,26 @@
     const dotsContainer = document.getElementById("dots-container");
     let dots = [];
 
-    function updateImage() {
-      imageElement.src = imageUrls[currentIndex];
-      updateDots();
-    }
-
     function updateDots() {
       dots.forEach((dot, index) => {
         dot.classList.toggle("active", index === currentIndex);
       });
     }
 
+    function showImage(index) {
+      imageElement.style.opacity = 0;
+      setTimeout(() => {
+        imageElement.src = imageUrls[index];
+        updateDots();
+        imageElement.onload = () => {
+          imageElement.style.opacity = 1;
+        };
+      }, 300); // Fade-out duration
+    }
+
     function goToImage(index) {
       currentIndex = index;
-      updateImage();
+      showImage(currentIndex);
       resetAutoSlide();
     }
 
@@ -103,20 +115,20 @@
 
     let autoSlideInterval = setInterval(() => {
       currentIndex = (currentIndex + 1) % imageUrls.length;
-      updateImage();
+      showImage(currentIndex);
     }, 5000);
 
     function resetAutoSlide() {
       clearInterval(autoSlideInterval);
       autoSlideInterval = setInterval(() => {
         currentIndex = (currentIndex + 1) % imageUrls.length;
-        updateImage();
+        showImage(currentIndex);
       }, 5000);
     }
 
     // Init
     createDots();
-    updateImage();
+    showImage(currentIndex);
   </script>
 </body>
 </html>
