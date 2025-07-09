@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { title: "Register", description: "Sign up for our program", link: "register" },
       { title: "Donate", description: "Support our cause", link: "donate" },
       { title: "Sponsors", description: "Our sponsors", link: "sponsors" },
+      { title: "Events", description: "Current and upcoming events", link: "events" },
       { title: "Contact", description: "Reach out to us", link: "contact" }
     ];
 
