@@ -39,6 +39,7 @@
       padding: 10px 20px;
       cursor: pointer;
       border-radius: 8px;
+      z-index: 2;
     }
 
     #prev {
@@ -48,6 +49,31 @@
     #next {
       right: 10px;
     }
+
+    .dots-container {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 2;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      background-color: white;
+      border-radius: 50%;
+      opacity: 0.5;
+      cursor: pointer;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .dot.active {
+      transform: scale(1.5);
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
@@ -56,38 +82,81 @@
     <img id="carousel-image" src="" alt="Carousel Image">
     <button id="prev" class="nav-button">&#8592;</button>
     <button id="next" class="nav-button">&#8594;</button>
+    <div class="dots-container" id="dots-container"></div>
   </div>
 
   <script>
     const imageUrls = [
       "https://codehs.com/uploads/740ffb834b7b6dcc59a41d27c66990ae?text=Image+1",
       "https://codehs.com/uploads/fef992eadaed70b563d886eeba99aba0?text=Image+2",
-      "https://via.placeholder.com/600x400?text=Image+3",
-      "https://via.placeholder.com/600x400?text=Image+4",
-      "https://via.placeholder.com/600x400?text=Image+5"
+      "https://codehs.com/uploads/18426a4920a31a86f3030161ff7e5e97?text=Image+3",
+      "https://codehs.com/uploads/8057d872d7692baff45215484700c528?text=Image+4",
+      "https://codehs.com/uploads/abf740fbd40b0c11f8b315a36cad07f4?text=Image+5"
     ];
 
     let currentIndex = 0;
-
     const imageElement = document.getElementById("carousel-image");
     const prevButton = document.getElementById("prev");
     const nextButton = document.getElementById("next");
+    const dotsContainer = document.getElementById("dots-container");
+
+    let dots = [];
 
     function updateImage() {
       imageElement.src = imageUrls[currentIndex];
+      updateDots();
+    }
+
+    function updateDots() {
+      dots.forEach((dot, index) => {
+        dot.classList.toggle("active", index === currentIndex);
+      });
+    }
+
+    function goToImage(index) {
+      currentIndex = index;
+      updateImage();
+      resetAutoSlide();
+    }
+
+    function createDots() {
+      imageUrls.forEach((_, index) => {
+        const dot = document.createElement("div");
+        dot.classList.add("dot");
+        dot.addEventListener("click", () => goToImage(index));
+        dotsContainer.appendChild(dot);
+        dots.push(dot);
+      });
     }
 
     prevButton.addEventListener("click", () => {
       currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
       updateImage();
+      resetAutoSlide();
     });
 
     nextButton.addEventListener("click", () => {
       currentIndex = (currentIndex + 1) % imageUrls.length;
       updateImage();
+      resetAutoSlide();
     });
 
-    // Initialize with the first image
+    // Auto-advance every 5 seconds
+    let autoSlideInterval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % imageUrls.length;
+      updateImage();
+    }, 5000);
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % imageUrls.length;
+        updateImage();
+      }, 5000);
+    }
+
+    // Initialize
+    createDots();
     updateImage();
   </script>
 </body>
