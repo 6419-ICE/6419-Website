@@ -265,7 +265,7 @@ html {
       right:90;
       margin-top:50px;
       overflow: hidden;
-      border-radius: 12px;
+      border-radius: 0px;
       box-shadow: 0 0 10px #000;
     }
     #carousel-image {
@@ -298,6 +298,27 @@ html {
       transition: transform 0.3s, opacity 0.3s;
     }
     .dot.active {
-      transform: scale(1.5);
+      transform: scale(1.2);
       opacity: 1;
+    }
+    .sponsors-list {
+        display: inline-block;
+        width: 150px;
+        text-align: center;
+        margin: 20px;
+        text-decoration: none;
+        color: black;
+        align-content: center;
+    }
+    .donation-box {
+        position: absolute;
+        left: 20px;
+        top: 100px;
+        background-color: #f8f8f8;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        margin-left: 100px;
+        margin-top: 40px;
+        max-width: 600px;
+        transition:all 0.5s;
     }
