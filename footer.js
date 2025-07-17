@@ -1,5 +1,5 @@
 const footerLeft = document.createElement("footer");
-footerRight.style.cssText = "z-index:999;";
+footerLeft.style.cssText = "z-index:999;";
 footerLeft.style.textAlign = "left";
 footerLeft.innerHTML = `<p>&#169 2017-2025 Iowa ICE Robotics</p>`;
 
