@@ -251,7 +251,7 @@ html {
         background-color: #f8f8f8;
         padding: 15px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        margin-left: 15vw;
+        margin-left: 10vw;
         margin-top: 5vh;
         max-width: 600px;
         transition:all 0.5s;
@@ -261,7 +261,7 @@ html {
       height: 400px;
       margin: 0 auto;
       position: absolute;
-      right:90;
+      right:60;
       margin-top:50px;
       overflow: hidden;
       border-radius: 15px;
