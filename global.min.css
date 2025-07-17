@@ -10,7 +10,7 @@
 }
 /*body*/
 body::-webkit-scrollbar {
-    display: none;
+    scrollbar-color: #FF6720;
 }
 body {
     margin: 0;
