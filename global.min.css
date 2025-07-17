@@ -9,15 +9,9 @@
     background: rgba(0,0,0,0)
 }
 /*body*/
-::-webkit-scrollbar {
-  width: 5px;
-  z-index:9999;
+body::-webkit-scrollbar {
+    display: none;
 }
-::-webkit-scrollbar-thumb {
-  background-color: #FF6720; /* Thumb color (the draggable part) */
-  border-radius: 6px;        
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -254,13 +248,11 @@ html {
     }
     .home-sidebar {
         position: absolute;
-        left: 20px;
-        top: 100px;
         background-color: #f8f8f8;
         padding: 15px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        margin-left: 100px;
-        margin-top: 40px;
+        margin-left: 15vw;
+        margin-top: 5vh;
         max-width: 600px;
         transition:all 0.5s;
     }
