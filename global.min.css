@@ -9,10 +9,15 @@
     background: rgba(0,0,0,0)
 }
 /*body*/
+::-webkit-scrollbar {
+  width: 5px;
+  z-index:9999;
+}
 ::-webkit-scrollbar-thumb {
-  background-color: #FF6720; /*scrollbar color*/
+  background-color: #FF6720; /* Thumb color (the draggable part) */
   border-radius: 6px;        
 }
+
 body {
     margin: 0;
     padding: 0;
