@@ -41,8 +41,6 @@ const headerHTML = `
   </div>
   <br>
   <br>
-  <br>
-  <br>
 `;
 
 document.addEventListener("DOMContentLoaded", () => {
