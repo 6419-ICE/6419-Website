@@ -1,10 +1,5 @@
 const headerHTML = `
-<header style="display:block;">
-  <p style="color:white; margin-top:15px; text-align:center;">
-    I.C.E. for Innovation, Collaboration, and Exellence
-  </p>
-</header>
-<header style="background-color:transparent;>
+<header>
   <div style="display: flex; align-items: center;">
     <button class="menu-button" onclick="toggleSidebar()">
       <span></span>
