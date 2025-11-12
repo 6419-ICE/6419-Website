@@ -14,36 +14,29 @@ document.addEventListener('DOMContentLoaded', () => {
       { title: "Events", description: "Current and upcoming events", link: "events" },
       { title: "Contact", description: "Reach out to us", link: "contact" }
     ];
-
     searchBar.addEventListener('mouseenter', () => {
       searchBar.classList.add('expanded');
     });
-
     searchBar.addEventListener('mouseleave', () => {
       if (!searchInput.matches(':focus') && searchInput.value === '') {
         searchBar.classList.remove('expanded');
         searchResults.classList.remove('show');
       }
     });
-
     searchInput.addEventListener('focus', () => {
       searchBar.classList.add('expanded');
     });
-
     searchInput.addEventListener('input', () => {
       const query = searchInput.value.toLowerCase().trim();
       searchResults.innerHTML = '';
-
       if (query === '') {
         searchResults.classList.remove('show');
         return;
       }
-
       const matched = pages.filter(page =>
         page.title.toLowerCase().includes(query) ||
         page.description.toLowerCase().includes(query)
       );
-
       if (matched.length === 0) {
         searchResults.innerHTML = `<div class="no-results">No search results</div>`;
       } else {
@@ -60,10 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
           searchResults.appendChild(result);
         });
       }
-
       searchResults.classList.add('show');
     });
-
     document.addEventListener('click', (e) => {
       if (!searchBar.contains(e.target)) {
         if (searchInput.value === '') {
@@ -72,5 +63,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     });
-  }, 50); // delay allows global-header.js to run first
+  }, 50); // for header
 });
