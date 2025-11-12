@@ -45,7 +45,6 @@ footer {
     width:100vw;
     font-size:60%;
 }
-/* only change stuff below here */
 a {
     margin: 0;
     padding: 0;
@@ -53,11 +52,6 @@ a {
     vertical-align: baseline;
     background: rgba(0,0,0,0)
 }
-/* end body */
-/* buttons */
-
-/*end other buttons*/
-/* header stuff */
 .headerbtn{
     color:#002D72;
     border:0px; 
