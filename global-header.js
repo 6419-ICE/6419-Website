@@ -24,7 +24,7 @@ const headerHTML = `
     <script src="searchbar.js">    
     </script>
     <a href="index">
-      <img class="logo" src="https://codehs.com/uploads/cb46df9431dd7ffe3372f71a3c7a97a8" alt="ICE">
+      <img class="logo" src="/6419-Website/res/logo.png" alt="ICE">
     </a>
   </div>
 </header>
