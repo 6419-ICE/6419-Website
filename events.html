@@ -14,10 +14,62 @@
     		<h1 style="color:black;">
       			Events
     		</h1>
+			<br>
+			<h2 style="color:blue">
+				Countdown Until Season Kickoff
+			</h2>
+			<br>
+			<div id="kickCountdown">
+				Loading...
+			</div>
+			<br>
+			<div id="reiCountdown">
+				Loading...
+			</div>
+			<br>
+			<a href="https://IAFirst.org">
+				Iowa FIRST Website
+			</a>
   		</center>
   		<script src="frame.js">
   		</script>
   		<script src="searchbar.js">    
   		</script>
+		<script>
+			function updatekCountdown() {
+        		const target = new Date("2026-01-10T11:00:00-06:00"); 
+        		const now = new Date();
+        		const diff = target - now;
+        		if (diff <= 0) {
+            		document.getElementById("kickCountdown").innerText = "Done";
+            		return;
+        		}
+        		const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        		const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        		const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        		const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        		document.getElementById("kickCountdown").innerText =
+            		`${days}d ${hours}h ${minutes}m ${seconds}s`;
+    		}
+			function updaterCountdown() {
+        		const target = new Date("2026-01-10T11:00:00-06:00"); 
+        		const now = new Date();
+        		const diff = target - now;
+        		if (diff <= 0) {
+            		document.getElementById("reiCountdown").innerText = "Done";
+            		return;
+        		}
+        		const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        		const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        		const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        		const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        		document.getElementById("reiCountdown").innerText =
+            		`${days}d ${hours}h ${minutes}m ${seconds}s`;
+    		}
+    		updaterCountdown();
+    		setInterval(updaterCountdown, 1000);
+			updatekCountdown();
+    		setInterval(updatekCountdown, 1000);
+		</script>
 	</body>
 </html>

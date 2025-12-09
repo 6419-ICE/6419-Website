@@ -23,33 +23,37 @@ const headerHTML = `
   	</div>
 	</header>
 	<div id="sidebar" class="sidebar">
-   		<a href="https://6419-ice.github.io/6419-Website/">
-				Home
-			</a>
+   		<a href="index.html">
+			Home
+		</a>
     	<hr style="border-top: 1px;margin: 0;">
-    	<a href="about">
-				About
-			</a>
+    	<a href="about.html">
+			About Us
+		</a>
     	<hr style="border-top: 1px;margin: 0;">
-    	<a href="register">
-				Register
-			</a>
+    	<a href="events.html">
+			Calender Of Events
+		</a>
     	<hr style="border-top: 1px;margin: 0;">
-    	<a href="donate">
-				Donate
-			</a>
+    	<a href="impact.html">
+			Our Impact
+		</a>
+		<hr style="border-top: 1px;margin: 0;">
+		<a href="robots.html">
+			Our Robots
+		</a>
     	<hr style="border-top: 1px;margin: 0;">
-    	<a href="sponsors">
-				Sponsors
-			</a>
+    	<a href="sponsors.html">
+			Sponsors
+		</a>
     	<hr style="border-top: 1px;margin: 0;">
-    	<a href="events">
-				Events
-			</a>
+    	<a href="donate.html">
+			Support Us
+		</a>
     	<hr style="border-top: 1px;margin: 0;">
-    	<a href="contact">
-				Contact Us
-			</a>
+    	<a href="contact.html">
+			Contact Us
+		</a>
     	<hr style="border-top: 1px;margin: 0;">
   	</div>
   	<br>
@@ -62,7 +66,7 @@ function toggleSidebar() {
 const footerLeft = document.createElement("footer");
 footerLeft.style.cssText = "z-index:999;";
 footerLeft.style.textAlign = "left";
-footerLeft.innerHTML = `<p>&#169 2017-2025 Kernel Chaos</p>`;
+footerLeft.innerHTML = `<p>&#169 2017-2026 Kernel Chaos</p>`;
 const footerRight = document.createElement("footer");
 footerRight.style.cssText = "background-color:transparent; text-align:right; z-index:999;";
 footerRight.innerHTML = `
