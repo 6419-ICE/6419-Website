@@ -23,12 +23,27 @@
 				Loading...
 			</div>
 			<br>
+			<h2 style="color:blue">
+				Countdown Until Minnesota Bluff County Regional Competition
+			</h2>
 			<div id="reiCountdown">
 				Loading...
 			</div>
 			<br>
-			<a href="https://IAFirst.org">
-				Iowa FIRST Website
+			<a style="color:blue" href="https://www.thebluealliance.com/event/2026mnwi">
+				Minnesota Bluff County Regional Competition On BlueAlliance
+			</a>
+			<br>
+			<br>
+			<h2 style="color:blue">
+				Countdown Until Iowa Regional Competition
+			</h2>
+			<div id="rei2Countdown">
+				Loading...
+			</div>
+			<br>
+			<a style="color:blue" href="https://www.thebluealliance.com/event/2026iacf">
+				Iowa Regional Competition On BlueAlliance
 			</a>
   		</center>
   		<script src="frame.js">
@@ -52,7 +67,7 @@
             		`${days}d ${hours}h ${minutes}m ${seconds}s`;
     		}
 			function updaterCountdown() {
-        		const target = new Date("2026-01-10T11:00:00-06:00"); 
+        		const target = new Date("2026-03-04T11:00:00-06:00"); 
         		const now = new Date();
         		const diff = target - now;
         		if (diff <= 0) {
@@ -66,6 +81,23 @@
         		document.getElementById("reiCountdown").innerText =
             		`${days}d ${hours}h ${minutes}m ${seconds}s`;
     		}
+			function updatermCountdown() {
+        		const target = new Date("2026-03-25T11:00:00-06:00"); 
+        		const now = new Date();
+        		const diff = target - now;
+        		if (diff <= 0) {
+            		document.getElementById("rei2Countdown").innerText = "Done";
+            		return;
+        		}
+        		const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        		const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        		const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        		const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        		document.getElementById("rei2Countdown").innerText =
+            		`${days}d ${hours}h ${minutes}m ${seconds}s`;
+    		}
+			updatermCountdown();
+			setInterval(updatermCountdown, 1000);
     		updaterCountdown();
     		setInterval(updaterCountdown, 1000);
 			updatekCountdown();

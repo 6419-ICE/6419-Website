@@ -206,6 +206,7 @@ a {
      color: white;
     }
     .icons {
+      margin-bottom:-5px;
       height:20px;
       width:20px;
       border-radius:7px;
@@ -253,7 +254,6 @@ a {
       width: 600px;
       height: 400px;
       margin: 0 auto;
-      position: absolute;
       right:60;
       margin-top:50px;
       overflow: hidden;
@@ -313,4 +313,36 @@ a {
         margin-top: 40px;
         max-width: 600px;
         transition:all 0.5s;
+    }
+    #sponsorCard a {
+      text-decoration:none;
+      color:black;
+    }
+    #sponsorCard {
+      background: lightsteelblue;
+      color:black;
+      border-radius:10px;
+      width: min-content;
+      padding:3px;
+      transition:0.3s all;
+      border:1px solid #002D72;
+    }
+    #sponsorCard a img {
+      border-radius:50%;
+      height: 200px;
+      width:200px;
+      border:1px solid white;
+    }
+    #sponsorCard:hover {
+      background:gainsboro;
+    }
+    #sponsors {
+      display:flex;
+      justify-content:space-evenly;
+    }
+    #T1 hr,#T2 hr,#T3 hr {
+      max-width:75%;
+    }
+    #T1 h2,#T2 h2,#T3 h2 {
+      font-size:2em;
     }
